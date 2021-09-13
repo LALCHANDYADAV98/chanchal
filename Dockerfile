@@ -6,6 +6,7 @@ WORKDIR /var/www/html
 RUN unzip xbe.zip
 RUN rm -rf xbe.zip &&\
     cp -rf xbe/* . &&\
-    rm -rf xbe
+    rm -rf xbe &&\
+    ls 
 EXPOSE 80
 CMD ["/usr/sbin/httpd", "-D", "FOREGROUND"]
